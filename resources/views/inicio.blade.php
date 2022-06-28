@@ -10,15 +10,13 @@
 		<a class="" href="{{route('formulario')}}">Formulario</a>
 	</div>
 
-	<div>
-
-		<ul>
-			@foreach($img->all() as $item)
-								
+	<div>		
+		@foreach($img->all() as $item)
+			<div>
 				<img src="{{asset(Storage::url($item->name))}}">
-				<li>{{$item->name}}</li>
-			@endforeach
-		</ul>	
+				<li>{{$item->name}}</li>	
+			</div>							
+		@endforeach		
 	</div>
 	
 
